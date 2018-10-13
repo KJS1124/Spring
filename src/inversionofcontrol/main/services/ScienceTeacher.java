@@ -10,6 +10,15 @@ public class ScienceTeacher implements Teacher {
         emp = new Employee("Hardy",26,"Science","CSE");
     }
 
+    public ScienceTeacher(String name,int age ,String department){
+        emp = new Employee(name,age,"Science",department);
+    }
+
+    public ScienceTeacher(Employee emp){
+        emp.setSubject("Science");
+        this.emp = emp;
+    }
+
     @Override
     public String getSubject() {
         return this.emp.getSubject();

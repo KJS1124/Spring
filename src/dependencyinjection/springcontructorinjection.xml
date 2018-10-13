@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="emp1" class="inversionofcontrol.main.entities.Employee">
+        <constructor-arg index="0" value="Akash"/>
+        <constructor-arg index="1" value="25"/>
+        <constructor-arg index="2" value=""/>
+        <constructor-arg index="3" value="CSE"/>
+    </bean>
+    <bean id="emp2" class="inversionofcontrol.main.entities.Employee">
+        <constructor-arg index="0" value="Rossy"/>
+        <constructor-arg index="1" value="23"/>
+        <constructor-arg index="2" value=""/>
+        <constructor-arg index="3" value="ECE"/>
+    </bean>
+    <bean id="emp3" class="inversionofcontrol.main.entities.Employee">
+        <constructor-arg index="0" value="Vikas"/>
+        <constructor-arg index="1" value="28"/>
+        <constructor-arg index="2" value=""/>
+        <constructor-arg index="3" value="CSE"/>
+    </bean>
+
+    <bean id="science" class="inversionofcontrol.main.services.ScienceTeacher">
+        <constructor-arg index="0" ref="emp3"></constructor-arg>
+    </bean>
+
+    <bean id="english" class="inversionofcontrol.main.services.EnglishTeacher">
+        <constructor-arg index="0" ref="emp2"></constructor-arg>
+    </bean>
+
+    <bean id="math" class="inversionofcontrol.main.services.MathTeacher">
+        <constructor-arg index="0" ref="emp1"></constructor-arg>
+    </bean>
+
+</beans>
