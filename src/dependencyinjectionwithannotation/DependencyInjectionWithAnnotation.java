@@ -13,14 +13,14 @@ public class DependencyInjectionWithAnnotation {
         Teacher teacher;
 
         //initialize it
-        teacher = context.getBean("englishTeacher",Teacher.class);
+        teacher = context.getBean("getEnglishTeacher",Teacher.class);
 
         // print data
         System.out.println(teacher.getEmployeeData());
         System.out.println(teacher.getWokDetails());
 
         // change object data with another teacher
-        teacher = context.getBean("scienceTeacher",Teacher.class);
+        teacher = context.getBean("getScienceTeacher",Teacher.class);
 
         // print data
         System.out.println(teacher.getEmployeeData());

@@ -17,7 +17,7 @@ public class EnglishTeacher implements Teacher {
     HOD hod;
 
     public EnglishTeacher(){
-        emp = new Employee("Rossy",23,"English","ECE");
+        emp = new Employee("Sukh",23,"English","ECE");
     }
 
     public EnglishTeacher(String name,int age ,String department){
